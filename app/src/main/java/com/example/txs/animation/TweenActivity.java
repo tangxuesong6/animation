@@ -69,7 +69,7 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
             case R.id.imgv_tween:
                 Toast.makeText(this, "点击了图片", Toast.LENGTH_SHORT).show();
                 break;
-                //动画集合　位移和旋转的组合
+                //动画集合　alpha和scale的组合
             case R.id.tv_set:
                 animation = AnimationUtils.loadAnimation(this, R.anim.set_one);
                 mImgvTween.startAnimation(animation);
