@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_rootview"
+    tools:context="com.example.txs.animation.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#6CC4B8"
+        android:gravity="center"
+        android:text="Android 动画"
+        android:textColor="#fff" />
+    
+    <TextView
+        android:background="#6CC4B8"
+        android:id="@+id/tv_frame"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="帧动画"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:background="#6CC4B8"
+        android:id="@+id/tv_tweened"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="补间动画"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:background="#6CC4B8"
+        android:id="@+id/tv_attribute"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="属性动画"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>
