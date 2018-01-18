@@ -23,10 +23,19 @@ public class FrameActivity extends AppCompatActivity {
     }
 
     private void setAnimation() {
-        //Fresco的动画 和ImageView用法一样
-        mImgvOne.setImageResource(R.drawable.fram_one);
-        animationDrawableOne = (AnimationDrawable) mImgvOne.getDrawable();
+        //Fresco的动画 和ImageView用法一样 使用xml文件执行的动画
+//        mImgvOne.setImageResource(R.drawable.fram_one);
+//        animationDrawableOne = (AnimationDrawable) mImgvOne.getDrawable();
+//        animationDrawableOne.start();
+        //使用代码创建的动画
+        animationDrawableOne = new AnimationDrawable();
+        animationDrawableOne.addFrame(getResources().getDrawable(R.mipmap.a_0),100);
+        animationDrawableOne.addFrame(getResources().getDrawable(R.mipmap.a_1),100);
+        animationDrawableOne.addFrame(getResources().getDrawable(R.mipmap.a_2),100);
+        animationDrawableOne.setOneShot(false);
+        mImgvOne.setBackground(animationDrawableOne);
         animationDrawableOne.start();
+
         //ImageView的动画
         mImgvTwo.setImageResource(R.drawable.fram_two);
         animationDrawableTwo = (AnimationDrawable) mImgvTwo.getDrawable();
