@@ -3,8 +3,11 @@ package com.example.txs.animation;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,13 +74,28 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
                 break;
                 //动画集合　alpha和scale的组合
             case R.id.tv_set:
-                animation = AnimationUtils.loadAnimation(this, R.anim.set_one);
-                mImgvTween.startAnimation(animation);
+                //xml实现
+//                animation = AnimationUtils.loadAnimation(this, R.anim.set_one);
+//                mImgvTween.startAnimation(animation);
+                //代码实现
+                AnimationSet animationSet = new AnimationSet(this,null);
+                AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f,1.0f);
+                alphaAnimation.setDuration(2000);
+                animationSet.addAnimation(alphaAnimation);
+                ScaleAnimation scaleAnimation = new ScaleAnimation(0.0f,1.0f,0.0f,1.0f,Animation.RELATIVE_TO_PARENT,0.5f,Animation.RELATIVE_TO_PARENT,0.5f);
+                scaleAnimation.setDuration(2000);
+                animationSet.addAnimation(scaleAnimation);
+                mImgvTween.startAnimation(animationSet);
                 break;
                 //透明
             case R.id.tv_alpha:
-                animation = AnimationUtils.loadAnimation(this, R.anim.alpha_one);
-                mImgvTween.startAnimation(animation);
+                //xml实现
+//                animation = AnimationUtils.loadAnimation(this, R.anim.alpha_one);
+//                mImgvTween.startAnimation(animation);
+                //代码实现
+                AlphaAnimation anim = new AlphaAnimation(0.0f, 1.0f);
+                anim.setDuration(3000);
+                mImgvTween.startAnimation(anim);
                 break;
                 //缩放
             case R.id.tv_scale:
