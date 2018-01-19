@@ -22,7 +22,8 @@
         <activity
             android:name=".FrameActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".TweenActivity"></activity>
+        <activity android:name=".TweenActivity" />
+        <activity android:name=".PropertyActivity"></activity>
     </application>
 
 </manifest>

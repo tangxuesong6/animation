@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
                 //属性动画
             case R.id.tv_attribute:
+                intent = new Intent(MainActivity.this,PropertyActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
